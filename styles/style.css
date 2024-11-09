@@ -1,0 +1,229 @@
+/* Global Styles */
+html, body {  
+    height: 100%;  /* Ensure full height */
+    margin: 0;  /* Reset margin */
+    font-family: 'Roboto', Arial, sans-serif;  /* Modern font */
+    color: #dcd3d3;  /* Change default text color to black */
+    line-height: 1.6;
+    background: url('../images/pexels2.jpg') no-repeat center center/cover;
+    background-attachment: fixed;  /* Parallax effect */
+    background-blend-mode: overlay;  /* Blends the background image with overlay */
+}
+
+/* Main container */
+.main-container {  
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: none;  /* No background overlay */
+    backdrop-filter: none;  /* Remove any blur or effect on background */
+    animation: fadeIn 1.5s ease-out;  /* Fade-in animation for container */
+}
+
+/* Title Styles */
+.upload-title {
+    font-size: 3em;  /* Larger title for impact */
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 30px;  /* Space below title */
+    text-transform: uppercase;
+    letter-spacing: 2px;  /* Letter spacing for elegance */
+    text-shadow: none;  /* Enhanced shadow for depth */
+    color: #000;  /* Change title color to black */
+    animation: slideUp 1s ease-out;  /* Slide up effect for title */
+}
+
+/* Home Page Content */
+.home-content {
+    background-color: rgba(0, 0, 0, 0.6);  /* Darker background for content */
+    padding: 30px 40px;
+    border-radius: 15px;
+    max-width: 600px;
+    text-align: center;
+    margin-top: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.home-content:hover {
+    transform: scale(1.05);  /* Hover effect to enlarge the content */
+}
+
+/* Button Group - Removed */
+.header-buttons {
+    display: none;  /* Hide button group */
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: #ff0000;  /* Change navigation link color */
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 5px 15px;  /* Add padding for better box shadow visibility */
+    border-radius: 15px;  /* Rounded corners for button */
+    background-color: rgba(74, 67, 67, 0.6);  /* Background color to make shadow more visible */
+}
+
+nav ul li a:hover {
+    color: black;  /* Hover color */
+    transform: translateY(-3px);  /* Slight move-up effect on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);  /* More prominent shadow on hover */
+}
+
+
+
+/* Form Styles */
+form {
+    background: rgba(255, 255, 255, 0.95);  /* Light translucent form */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    max-width: 450px;
+    margin: 50px auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+form:hover {
+    transform: translateY(-5px);  /* Lift effect on hover */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    color: #000;  /* Change label color to black */
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Input Fields */
+form input[type="text"], 
+form input[type="email"], 
+form input[type="password"], 
+form input[type="file"], 
+form textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 25px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input[type="text"]:focus, 
+form input[type="email"]:focus, 
+form input[type="password"]:focus, 
+form textarea:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);  /* Soft glow effect */
+}
+
+/* Submit Button */
+form input[type="submit"] {
+    background-color: #35424a;
+    color: #000;  /* Change submit button text to black */
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #090909;
+    transform: translateY(-2px);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #35424a;
+    color: #ffffff;  /* Change footer text color to black */
+    padding: 30px 0;
+    text-align: center;
+    margin-top: 40px;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);  /* Shadow at the top of footer */
+}
+
+footer .social-icons a {
+    color: #000;  /* Change social icon color to black */
+    margin: 0 20px;
+    font-size: 30px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    color: #f1c40f;  /* Golden hover effect for social icons */
+    transform: scale(1.1);  /* Slight enlarge effect */
+}
+
+/* Enhanced Hover Effects */
+button:hover, form input[type="submit"]:hover {
+    background-color: #e0e2e6;
+    transform: scale(1.1);
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .upload-title {
+        font-size: 2em;
+    }
+
+    .main-container {
+        padding: 20px;
+    }
+
+    form {
+        padding: 25px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideUp {
+    0% { transform: translateY(30px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+.upload-message {
+    padding: 20px;
+    margin: 20px 0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background-color: #f1f1f1;
+    color: #000;  /* Change upload message text color to black */
+    font-size: 16px;
+    text-align: center;
+}
+
